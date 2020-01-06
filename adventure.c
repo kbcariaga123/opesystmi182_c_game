@@ -78,7 +78,7 @@ int main(void)
     ///////////////////////////////////////////////////////////////////END SETTING UP THE BOARD//////////////////////////////////////////
  char c;
    do{
-        printf("Welcome to the Adventure Game 8=up,2=down,4=left,6=right\n");
+        printf("Welcome to the Adventure Game 8=up, 2=down, 4=left, 6=right\n");
         printf("X-BLOCK, *-DIE, T-TREASURE, P-PLAYER\n");
         printf("Object of the game is to get to the treasure\n\n");
    for(i=0; i<n; i++)
@@ -227,3 +227,4 @@ int moveCheck2(int playersMove, char arr[][10], int iPosition, int jPosition)
     
     return 1;
 }
+
