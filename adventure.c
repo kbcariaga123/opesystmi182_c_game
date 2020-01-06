@@ -79,7 +79,7 @@ int main(void)
  char c;
    do{
         printf("Welcome to the Adventure Game 8=up,2=down,4=left,6=right\n");
-        printf("X-BLOCK, *-DIE, T-TREASURE, P-PERSON\n");
+        printf("X-BLOCK, *-DIE, T-TREASURE, P-PLAYER\n");
         printf("Object of the game is to get to the treasure\n\n");
    for(i=0; i<n; i++)
    {
@@ -117,7 +117,7 @@ int movePlayer(int playersMove, char arr[][n], int iPosition, int jPosition)
     {//printf("move up\n");
                    iPlayerPosition -= 1;
     }
-    else if(playersMove ==2 )
+    else if(playersMove == 2)
     {//printf("move down\n");
                    iPlayerPosition += 1;
     }
@@ -176,22 +176,22 @@ int moveCheck(int playersMove, char arr[][10], int iPosition, int jPosition)
 int wallCheck(int playersMove, char arr[][10], int iPosition, int jPosition)
 {
     //Handling the corners
-    if(iPosition<0 && jPosition<0 && (playersMove== 8 || playersMove==4))
+    if(iPosition<0 && jPosition<0 && (playersMove== 8 || playersMove== 4))
     {
                     printf("Can't move there\n");
                     return 0;
     }
-    else if(iPosition<0 && jPosition>9 && (playersMove== 8 || playersMove==6))
+    else if(iPosition<0 && jPosition>9 && (playersMove== 8 || playersMove== 6))
     {
                     printf("Can't move there\n");
                     return 0;
     }
-    else if(iPosition>9 && jPosition<0 && (playersMove== 2 || playersMove==4))
+    else if(iPosition>9 && jPosition<0 && (playersMove== 2 || playersMove== 4))
     {
                     printf("Can't move there\n");
                     return 0;
     }
-    else if(iPosition>9 && jPosition<0 && (playersMove== 2 || playersMove==6))
+    else if(iPosition>9 && jPosition<0 && (playersMove== 2 || playersMove== 6))
     {
                     printf("Can't move there\n");
                     return 0;
